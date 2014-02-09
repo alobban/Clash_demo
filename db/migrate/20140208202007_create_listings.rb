@@ -5,7 +5,7 @@ class CreateListings < ActiveRecord::Migration
       t.text :rental_desc, null: false
       t.integer :bedroom, default: 0
       t.float :bathroom, default: 1
-      t.integer :price, null: false
+      t.string :rate, default: "Call For Rent"
       t.string :phone, default: "999-9999"
       t.string :town, null: false
       t.integer :parish_id
