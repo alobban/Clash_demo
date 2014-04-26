@@ -1,0 +1,20 @@
+<h1>Demo Results Page</h1>
+
+<table class="listing" summary="Subject list">
+  <tr class="header">
+    <th>&nbsp;</th>
+    <th>Town</th>
+    <th>Description</th>
+    <th>Landlord</th>
+  </tr>
+  <% @output.each do |list| %>
+  <tr>
+    <td><%= list.id %></td>
+    <td><%= list.town %></td>
+    <td><%= list.rental_desc %></td>
+    <td><%= list.landlord %></td>
+  </tr>
+  <% end %>
+
+</table>
+

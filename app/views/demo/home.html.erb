@@ -1,0 +1,10 @@
+<h1>Demo Search Page</h1>
+<p>Use to test pulling data from the DB.</p>
+
+<%= form_tag(:action => 'results') do %>
+
+<%= text_field_tag('town', params[:criterion]) %>
+
+<%= submit_tag("Search") %>
+
+<% end %>
