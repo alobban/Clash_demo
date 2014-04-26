@@ -11,10 +11,10 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: clash_demo_development
+  database: #clash_demo_development
   pool: 5
-  username: root
-  password:
+  username: simple_cms
+  password: amanda01
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and

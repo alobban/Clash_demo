@@ -1,7 +1,12 @@
 ClashDemo::Application.routes.draw do
-  get "search/index"
-  get "search/show"
-  get "search/home"
+
+  root "search#index"
+  # get "search/index"
+  # get "search/show"
+  # get "search/home"
+
+  match ':controller(/:action(/:id))', :via => :get
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
