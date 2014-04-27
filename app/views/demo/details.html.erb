@@ -1,0 +1,31 @@
+<h1>Details Page</h1>
+<div class="details">
+  <h2>Show Listing</h2>
+
+  <table summary="Listing Detail View">
+    <tr>
+      <th>Description</th>
+      <td><%= @property.rental_desc %></td>
+    </tr>
+    <tr>
+      <th>Bedrooms</th>
+      <td><%= @property.bedroom %></td>
+    </tr>
+    <tr>
+      <th>Bathrooms</th>
+      <td><%= @property.bathroom %></td>
+    </tr>
+    <tr>
+      <th>Rate</th>
+      <td><%= @property.rate %></td>
+    </tr>
+    <tr>
+      <th>Phone</th>
+      <td><%=  @property.landlord + " at " + @property.phone %></td>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <td><%=  @property.town + "/" + @property.parish_id.to_s + "/" + @property.county_id.to_s %></td>
+    </tr>
+  </table>
+</div>

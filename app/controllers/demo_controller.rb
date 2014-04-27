@@ -3,6 +3,10 @@ class DemoController < ApplicationController
   end
 
   def results
-  	@output = Listing.where(:town => params[:town])
+  	@properties = Listing.where(:town => params[:town])
+  end
+
+  def details
+  	@property = Listing.find(params[:id])
   end
 end
