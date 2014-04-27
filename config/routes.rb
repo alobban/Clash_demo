@@ -1,5 +1,5 @@
 ClashDemo::Application.routes.draw do
-
+  root "demo#home"
   post "demo/results"
   match ':controller(/:action(/:id))', :via => :get
   # The priority is based upon order of creation: first created -> highest priority.
