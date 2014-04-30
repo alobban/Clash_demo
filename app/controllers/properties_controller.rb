@@ -29,9 +29,30 @@ class PropertiesController < ApplicationController
   end
 
   def edit
+    @property = Listing.find(params[:id])
+    @parish = county_parish
+  end
+
+  def update
+    # Find an existing object using form parameters
+    @property = Listing.find(params[:id])
+    # Update the object
+    if @property.update_attributes(property_params)
+      # If update succeeds, redirect to the index action
+      redirect_to(:action => 'show', :id => @property.id)
+    else
+      # If update fails, redisplay the form so user can fix problems
+      render('edit')
+    end
   end
 
   def delete
+    @property = Listing.find(params[:id])
+  end
+
+  def destroy
+    property = Listing.find(params[:id]).destroy
+    redirect_to(:action => 'index')
   end
 
   private
