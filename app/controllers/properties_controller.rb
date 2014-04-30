@@ -3,7 +3,11 @@ class PropertiesController < ApplicationController
   layout false
 
   def index
-    @properties = Listing.all
+    if Listing.all.eql?(nil)
+      redirect_to(:action => 'new')
+    else
+      @properties = Listing.all
+    end
   end
 
   def show
