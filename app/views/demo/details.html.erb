@@ -2,6 +2,8 @@
 <div class="details">
   <h2>Show Listing</h2>
 
+  <%= link_to("<< Back to Search", { :action => 'home' }, :class => 'back-link') %>
+
   <table summary="Listing Detail View">
     <tr>
       <th>Description</th>
@@ -16,11 +18,11 @@
       <td><%= @property.bathroom %></td>
     </tr>
     <tr>
-      <th>Rate</th>
-      <td><%= @property.rate %></td>
+      <th>Rent</th>
+      <td><%= number_to_currency(@property.rate).to_s + "/mo." %></td>
     </tr>
     <tr>
-      <th>Phone</th>
+      <th>Call</th>
       <td><%=  @property.landlord + " at " + @property.phone %></td>
     </tr>
     <tr>
