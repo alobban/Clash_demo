@@ -1,0 +1,28 @@
+<div class="properties index">
+  <h2>Properties</h2>
+
+  <%= link_to("Add New Property", {:action => 'new'}, :class => 'action new') %>
+
+  <table class="listing" summary="Property List">
+    <tr class="header">
+      <th>&nbsp;</th>
+      <th>Description</th>
+      <th>Bedrooms</th>
+      <th>Bathrooms</th>
+      <th>Actions</th>
+    </tr>
+    <% @properties.each do |property| %>
+    <tr>
+      <td><%= property.id %></td>
+      <td><%= property.rental_desc %></td>
+      <td class="center"><%= property.bedroom %></td>
+      <td class="center"><%= property.bathroom %></td>
+      <td class="actions">
+        <%= link_to("Show", { :action => 'show', :id => property.id }, :class => 'action show') %>
+        <%= link_to("Edit", '#', :class => 'action edit') %>
+        <%= link_to("Delete", '#', :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

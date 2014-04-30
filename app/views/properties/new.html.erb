@@ -1,0 +1,47 @@
+<%= link_to("<< Back to List", { :action => 'index' }, :class => 'back-link') %>
+
+<div class="properties new">
+  <h2>Create Property</h2>
+
+  <%= form_for(:property, :url => { :action => 'create' }) do |f| %>
+
+    <table summary="Property form fields">
+      <tr>
+        <th>Landlord</th>
+        <td><%= f.text_field(:landlord) %></td>
+      </tr>
+      <tr>
+        <th>Bedrooms</th>
+        <td><%= f.text_field(:bedroom) %></td>
+      </tr>
+      <tr>
+        <th>Bathrooms</th>
+        <td><%= f.text_field(:bathroom) %></td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td><%= f.text_area(:rental_desc) %></td>
+      </tr>
+      <tr>
+        <th>Rent</th>
+        <td><%= f.text_field(:rate) %></td>
+      </tr>
+      <tr>
+        <th>Phone</th>
+        <td><%= f.text_field(:phone) %></td>
+      </tr>
+      <tr>
+        <th>Location</th>
+        <td><%= f.text_field(:town) %></td>
+        <td><%= f.select(:parish_id, @parish.all.map {|p| [ p.parish_name, p.id ]}, {:prompt => 'Select Location Parish'} ) %></td>
+
+      </tr>
+
+    </table>
+
+    <div class="form-buttons">
+      <%= submit_tag("Create Property") %>
+    </div>
+
+  <% end %>
+</div>
