@@ -1,0 +1,21 @@
+/* 
+This is the CSS for the CLASH Demo site.
+*/
+$main-color: #FFD875;
+$header-color: #250069;
+$text-color: #5B02FF;
+
+body {
+	background-color: $main-color;
+}
+
+h1, h2 {
+	color: $header-color;
+	text-align: center;
+}
+
+p {
+	color: $text-color;
+	font-family: "Soho";
+	font-size: 13px;
+}
