@@ -3,7 +3,7 @@ class DemoController < ApplicationController
   end
 
   def results
-  	@properties = Listing.where(:town => params[:town].capitalize)
+  	@properties = Listing.where(:town => params[:town].titleize)
   end
 
   def details

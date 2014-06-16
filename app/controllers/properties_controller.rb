@@ -18,7 +18,6 @@ class PropertiesController < ApplicationController
   def create
     # Instantiate a new object using form parameters
     @property = Listing.new(property_params)
-    @property.town = cap_city_name @property.town
     # Save the object
     if @property.save
       # If save succeeds, redirect to the index action
@@ -37,7 +36,6 @@ class PropertiesController < ApplicationController
   def update
     # Find an existing object using form parameters
     @property = Listing.find(params[:id])
-    @property.town = cap_city_name @property.town
     # Update the object
     if @property.update_attributes(property_params)
       # If update succeeds, redirect to the index action
@@ -65,11 +63,6 @@ class PropertiesController < ApplicationController
       # - allows listed attributes to be mass-assigned
       params.require(:property).permit(:landlord, :bedroom, :bathroom, 
         :rental_desc, :rate, :phone, :town, :parish_id)
-    end
-
-    def cap_city_name name
-      puts name
-      name.split(' ').map { |a| a.capitalize }.join(' ')
     end
 
     def county_parish
