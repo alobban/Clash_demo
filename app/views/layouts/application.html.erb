@@ -5,10 +5,45 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
 <body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="">
+	  <div class="page">
+		  <header class="banner">
+		    <div class="container">
 
-<%= yield %>
+			</div>
+		  </header>
 
+		  <nav class="navbar navbar-inverse">
+			<ul class="nav nav-tabs nav-justified">
+			  <li><%= link_to "Home",			{ :controller => 'demo', :action => 'home' }, :class => 'back-link' %></li>
+			  <li><%= link_to "Ad Creation",	{ :controller => 'properties', :action => 'index' }, :class => 'prop-link' %></li>
+			  <li><%= link_to "Contact",		'#' %></li>
+			  <li><%= link_to "About Us",		'#' %></li>
+			</ul>
+		  </nav>
+
+		  <section>
+			  <div class="container"> 
+				<%= yield %>
+			  </div>
+		  </section>
+
+		  <footer class="panel panel-default">
+		  	<div class="panel-footer">
+		  		&copy; CLASHere.com 2014
+		  	</div>
+		  </footer>
+	  </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

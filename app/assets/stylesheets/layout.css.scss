@@ -1,12 +1,17 @@
 /* 
 This is the CSS for the CLASH Demo site.
 */
-$main-color: #FFD875;
+$main-color: #98A399;
 $header-color: #250069;
 $text-color: #5B02FF;
+$page-color: #fff;
+$but-text-color: #000;
+
 
 body {
 	background-color: $main-color;
+	margin: 0;
+	padding: 0px 35px 10px 20px;
 }
 
 h1, h2 {
@@ -18,4 +23,22 @@ p {
 	color: $text-color;
 	font-family: "Soho";
 	font-size: 13px;
+}
+
+header {
+	height: 275px;
+	background: url(banner_large.jpg) no-repeat right 0px;
+	background-size: 980px 275px;
+}
+
+.page {
+	max-width:	980px;
+	margin: 0px auto 0px auto;
+	position: relative;
+	background-color: $page-color;
+}
+
+.page section div.content {
+	margin-top: 20px;
+	padding: 10px 10px 50px 0px;
 }
