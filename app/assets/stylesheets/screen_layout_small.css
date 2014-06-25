@@ -22,7 +22,7 @@
 
 	nav a {
 		color: #a6abc5;
-		display: block;
+		display: inline-block;
 		margin: 15px;
 		padding: 9px;
 		border: 1px solid #a6abc5;
