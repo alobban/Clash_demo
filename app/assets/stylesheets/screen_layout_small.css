@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/* Layout Small Screens */
+@media only screen and (min-width: 100px) and (max-width: 500px){
+
+	header {
+		height: 80px;
+		background: url(banner_small.jpg) no-repeat right 0px;
+		background-size: 500px 80px;
+	}
+
+	body {
+		background-color: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	nav {
+		position: static;
+		padding: 10px 0px 10px 0px;
+	}
+
+	nav a {
+		color: #a6abc5;
+		display: block;
+		margin: 15px;
+		padding: 9px;
+		border: 1px solid #a6abc5;
+		background: url(mobile_link_arrow.png) no-repeat right center;
+		-moz-border-radius: 12px;
+		-webkit-border-radius: 12px;
+		border-radius: 12px;
+	}
+
+
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (min--moz-device-pixel-ratio: 2),
+		only screen and (-o-min-device-pixel-ratio: 2/1),
+		only screen and (min-device-pixel-ratio: 2),
+		only screen and (min-resolution: 192dpi),
+		only screen and (min-resolution: 2dppx)
+	{
+
+		header {
+			background: url(banner_small_2x.jpg);
+		}
+	}
+
+}

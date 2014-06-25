@@ -14,3 +14,11 @@
 @import "bootstrap";
 @import "bootstrap/theme";
 @import "layout.css.scss";
+/* 
+@import "layout.css.scss"; 
+@import "media-queries";
+*/
+@import "screen_layout_large.css";
+@import "screen_layout_small.css";
+@import "screen_layout_medium.css";
+
