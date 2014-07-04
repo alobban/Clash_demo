@@ -19,6 +19,27 @@
 @import "media-queries";
 */
 @import "screen_layout_large.css";
-@import "screen_layout_small.css";
 @import "screen_layout_medium.css";
+@import "screen_layout_small.css";
 
+/* 
+  This area below is to overwrite Bootstrap's code from setting the 
+  media quieries from defaulting the breakpoint at 768px for our 
+  medium screen layout.
+*/
+.nav-justified, .nav-tabs.nav-justified {
+  width: 100%; }
+  .nav-justified > li, .nav-tabs.nav-justified > li {
+    float: none; }
+    .nav-justified > li > a, .nav-tabs.nav-justified > li > a {
+      text-align: center;
+      margin-bottom: 5px; }
+  .nav-justified > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto; }
+  @media (min-width: 501px) {
+    .nav-justified > li, .nav-tabs.nav-justified > li {
+      display: table-cell;
+      width: 1%; }
+      .nav-justified > li > a, .nav-tabs.nav-justified > li > a {
+        margin-bottom: 0; } }
