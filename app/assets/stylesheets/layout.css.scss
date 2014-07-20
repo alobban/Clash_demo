@@ -1,9 +1,10 @@
 /* 
 This is the CSS for the CLASH Demo site.
 */
-$main-color: #98A399;
-$header-color: #250069;
+$main-color: #66A3D2;//#1D766F;//#98A399;
+$header-color: #0A67A3;
 $text-color: #5B02FF;
+$slogan-color: #0B61A4;
 $page-color: #fff;
 $but-text-color: #000;
 
@@ -39,7 +40,29 @@ nav a {
 	position: relative;
 	background-color: $page-color;
 
-  section div.content {
-	margin-top: 20px;
+  section {
+  	div.content {
+		margin-top: 20px;
+
+		h3 {
+			color: $slogan-color;
+			font-family: Book Antiqua;
+			font-style: italic;
+			font-weight: bold;
+		}
+	}
+
+	div.prefooter {
+		margin-top: 50px;
+	}
+  }
+
+  footer {
+  	div.inline {
+  		display: inline;
+  	}
+  	div.right {
+  		float: right;
+  	}
   }
 }

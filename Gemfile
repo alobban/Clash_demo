@@ -24,6 +24,7 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 
 gem 'bootstrap-sass'
+gem 'bootstrap_form'
 gem 'sass-mediaqueries-rails'
 
 group :doc do

@@ -5,13 +5,18 @@
 	<%= link_to("Property Creation", { :controller => 'properties', :action => 'index' }, :class => 'prop-link') %>
 </button>
 <div class="search content">
-	<p>Type the name of the town to search for an apartment in.</p>
+	<div class="col-md-6">
+		<h3>Get in where you fit in.</h3>
+	</div>
 
-	<%= form_tag(:action => 'results') do %>
-
-	<%= text_field_tag('town', params[:criterion]) %>
-
-	<%= submit_tag("Search") %>
-
+	<%= form_tag action: 'results' do %>
+		<div class="col-md-8">
+		    <div class="input-group">
+				<%= text_field_tag('town', params[:criterion], class: "form-control", placeholder: 'City or Town') %>
+				<span class='input-group-btn'>
+					<%= submit_tag("Search", class: "btn btn-primary") %>
+				</span>
+			</div>
+		</div>
 	<% end %>
 </div>
