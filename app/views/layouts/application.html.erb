@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scalable=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <!--
   <link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width: 500px)" href="app/assests/stylesheets/screen_layout_small.css" />
 -->
@@ -21,7 +21,7 @@
 	  <div class="row-fluid">
 	    <div class="">
 		  <header class="banner">
-		    <div class="container">
+		    <div class="">
 
 			</div>
 		  </header>
@@ -30,21 +30,30 @@
 			<ul class="nav nav-pills nav-justified">
 			  <li><%= link_to "Home",			{ :controller => 'demo', :action => 'home' }, :class => 'back-link' %></li>
 			  <li><%= link_to "Ad Creation",	{ :controller => 'properties', :action => 'index' }, :class => 'prop-link' %></li>
-			  <li><%= link_to "Contact",		'#' %></li>
-			  <li><%= link_to "About Us",		'#' %></li>
+			  <li><%= link_to "Contact",		{ :controller => 'demo', :action => 'contact' } %></li>
+			  <li><%= link_to "About Us",		{ :controller => 'demo', :action => 'about' } %></li>
+			  <li><%= link_to "sign in",		'#' %></li>
 			</ul>
 		  </nav>
 
-		  <section>
-			  <div class="container"> 
-				<%= yield %>
-			  </div>
-		  </section>
+		  <div class="box">
+			  <section>
+				  <div class=""> 
+					<%= yield %>
+				  </div>
+			  </section>
 
-		  <section>
-		  	<div class="prefooter">
-		  	</div>
-		  </section>
+			  <article>
+			  	<div class="">
+			  		<%= render('layouts/notestab') %>
+			  	</div>
+			  </article>
+
+			  <section>
+			  	<div class="prefooter">
+			  	</div>
+			  </section>
+		  </div>
 
 		  <footer class="panel panel-default">
 		  	<div class="panel-footer">
@@ -52,7 +61,7 @@
 		  		&copy; CLASHere.com 2014
 		  	  </div>
 		  	  <div class="inline right">
-		  	  	<a href="http://www.linkedin.com/pub/andrew-lobban/39/94b/8aa" style="text-decoration:none;"><span style="font: 80% Arial,sans-serif; color:#0783B6;"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Andrew Lobban's LinkedIn profile" style="vertical-align:middle" border="0">View Andrew Lobban's profile</span></a>
+		  	  	<a href="http://www.linkedin.com/pub/andrew-lobban/39/94b/8aa" style="text-decoration:none;"><span style="font: 80% Arial,sans-serif; color:#0783B6;"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View Andrew Lobban's LinkedIn profile" style="vertical-align:middle" border="0">View Drew's profile</span></a>
 		  	  </div>
 		  	</div>
 		  </footer>
@@ -60,5 +69,15 @@
     </div>
   </div>
 </div>
+
+<!-- JavaScript -->
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+			$('.nav-tabs a:first').tab('show');
+		});
+	</script>
+
 </body>
 </html>

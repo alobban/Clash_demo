@@ -2,8 +2,6 @@
 
 /* Layout (global rules for all sizes) */
 
-body { margin: 0; padding: 0; }
-
 header a.logo {
 	display: block;
 	position: absolute;
@@ -39,7 +37,7 @@ nav {
 	}
 
 	@media screen and (max-width: 990px){
-		footer { padding-left: 20px; }
+		footer { padding-left: 20px; padding-right: 20px; }
 	}
 
 	@media
